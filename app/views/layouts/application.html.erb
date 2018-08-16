@@ -63,11 +63,11 @@
       </header>
       <!--Fix right-->
       <div class="right-tag">
-        <p><%=link_to_unless_current image_tag('recientes.png'), :back %></p>
+        <p><%=link_to_unless_current image_tag('facebook.png'), 'https://facebook.com/fedesoftcol', target: '_blank' %></p>
         <hr class="divisor-line">
-        <p><%=link_to_unless_current image_tag('favoritos.png'), favoritos_favoritos_path %></p>
+        <p><%=link_to_unless_current image_tag('twitter.png'), 'https://twitter.com/fedesoftcol', target: '_blank' %></p>
         <hr class="divisor-line">
-        <p><%=link_to_unless_current image_tag('p_cercanos.png'), puntos_cercanos_puntos_cercanos_path %></p>
+        <p><%=link_to_unless_current image_tag('youtube.png'), 'https://www.youtube.com/channel/UCyjvUDXyN-0bwtvUZlT2bvQ', target: '_blank' %></p>
       </div>
 
       <% if notice %>

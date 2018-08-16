@@ -1,0 +1,51 @@
+<div class="contenedor">
+
+  <div class="center">
+    <h1 class="main-color"><i class="fa fa-recycle"></i> Contacto</h1>
+    <hr>
+    <p></p>
+    <%= image_tag('contact.jpg', size: '600x220') %>
+    <br />
+    <br />
+    <p>Dejanos tus comentarios, felicitaciones, dudas y/o sugerencias, <br />
+      <strong>¡estamos emocionados por responderlas!</strong></p>
+
+    <h1>Mis formularios</h1>
+    <% if user_signed_in? %>
+    <table>
+      <tr>
+        <th><h3 class="table-gray main-color">Nombre:</h3></th>&nbsp;&nbsp;&nbsp;
+        <th><h3 class="table-gray main-color">Mensaje:</h3></th>
+        <th><h3 class="table-gray main-color">&nbsp;</h3></th>
+
+      </tr>
+    <% @contactos.each do |contacto| %>
+    <tr>
+      <td><h4 class="table-gray-light"><%= contacto.nombre %></h4></td>
+      <td><h4 class="table-gray-light"><%= truncate(contacto.mensaje, length: 100) %></h4></td>
+      <td class="table-gray-light"><%= link_to 'Mostrar', contacto_path(contacto), :class => 'main-color a' %> |
+        <%= link_to 'Editar', edit_contacto_path(contacto), :class => 'main-color a' %>
+      | <%= link_to 'Eliminar', contacto_path(contacto), :class => 'main-color a',
+      method: :delete,
+      data: { confirm: 'Estas seguro?'} %> </td>
+
+    </tr>
+
+    <% end %>
+
+    </table>
+    <% else %>
+    <div class="center">
+    <%= button_to 'Inicia Sesión', new_user_session_path %> ó
+    <%= button_to 'Registrate', new_user_registration_path %>
+    <p></p>
+    Para ver formularios anteriores
+  </div>
+    <% end %>
+    <br />
+    <br />
+    <h4 class="main-color a">
+    <%= link_to 'Enviar un mensaje', new_contacto_path %>
+    </h4>
+  </div>
+</div>

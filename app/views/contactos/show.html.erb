@@ -1,0 +1,38 @@
+<div class="contenedor">
+  <div class="center">
+    <p></p>
+    <h1 class="main-color"><i class="fa fa-recycle"></i> Contacto</h1>
+    <hr>
+    <br />
+    <h3 class="main-color">Mostrando mensaje de <strong><%= @contacto.nombre %></strong></h3>
+
+
+    <table>
+      <tr>
+        <th><h4 class="table-gray-slow main-color">Nombre:</h4></th>&nbsp;
+        <th><h4 class="table-gray-slow main-color">Email:</h4></th>&nbsp;
+        <th><h4 class="table-gray-slow main-color">Teléfono:</h4></th>&nbsp;
+        <th><h4 class="table-gray-slow main-color">Mensaje:</h4></th>&nbsp;
+
+      </tr>
+
+      <tr>
+        <td><h5 class="table-gray-light-slow"><%= @contacto.nombre %></56></td>
+        <td><h5 class="table-gray-light-slow"><%= @contacto.email %></h5></td>
+        <td><h5 class="table-gray-light-slow"><%= @contacto.telefono %></h5></td>
+        <td><h5 class="table-gray-light-slow"><%= truncate(@contacto.mensaje, length: 50) %></h5></td>
+
+      </tr>
+    </table>
+
+    <br />
+    <br />
+    <h4 class="main-color a">
+    <%= link_to 'Editar', edit_contacto_path(@contacto) %>
+    </h4>
+    <p></p>
+    <h4 class="main-color a">
+    <%= link_to 'Regresar', contactos_path %>
+    </h4>
+  </div>
+</div>

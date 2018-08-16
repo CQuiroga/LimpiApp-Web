@@ -1,0 +1,44 @@
+
+
+<div class="contenedor">
+  <h1 class="main-color"><i class="fa fa-recycle"></i> Contacto</h1>
+  <hr>
+  <p></p>
+  <%= image_tag('contact.jpg') %>
+  <br />
+  <br />
+  <p>Dejanos tus comentarios, felicitaciones, dudas y/o sugerencias, ¡estamos emocionados por responderlas!</p>
+  <h1>Mis mensajes</h1>
+  <% if user_signed_in? %>
+  <table>
+    <tr>
+      <th>Nombre:</th>
+      <th>Mensaje:</th>
+      <th></th>
+    </tr>
+  <% @contactos.each do |contacto| %>
+  <tr>
+    <td><%= contacto.nombre %></td>
+    <td><%= truncate(contacto.mensaje, length: 150) %></td>
+    <td><%= link_to 'Mostrar', contacto_path(contacto)%></td>
+    <td><%= link_to 'Editar', edit_contacto_path(contacto) %></td>
+    <td><%= link_to 'Eliminar', contacto_path(contacto),
+    method: :delete,
+    data: { confirm: 'Confirmas Eliminar el mensaje?'} %></td>
+  </tr>
+
+  <% end %>
+
+  </table>
+  <% else %>
+  <div class="center">
+  <%= button_to 'Inicia Sesión', new_user_session_path %> ó
+  <%= button_to 'Registrate', new_user_registration_path %>
+  <p></p>
+  Para generar un reporte
+</div>
+  <% end %>
+  <%= link_to 'Crear', :action=>"new", :controller=>"articulos"%>
+  <%= link_to 'Regresar', contactos_contactos_path %>
+
+</div>

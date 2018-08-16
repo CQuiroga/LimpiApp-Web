@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   devise_scope :users do
 
     resources :reportes
-  
+    resources :contactos
+
     get 'puntos_cercanos/puntos_cercanos'
     get 'favoritos/favoritos'
     get 'recientes/recientes'
@@ -17,7 +18,6 @@ Rails.application.routes.draw do
     get 'beneficios/beneficios'
     get 'mi_ruta/mi_ruta'
     get 'cultura/cultura'
-    get 'contacto/contacto'
     get 'eventos/eventos'
     get 'acercade/acercade'
     get 'home/index'

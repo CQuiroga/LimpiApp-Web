@@ -230,6 +230,14 @@ footer {
   border-radius: 16% 16% 16% 16%;
   margin: 15% 2.5rem 0 2.5rem;
   padding: 10% 0 0 0.8rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+    .tab-ecoaliados {
+      width: 20rem;
+      height: 20rem;
+      background-color: rgba(255, 255, 255, 0.78);
+      border-radius: 20% 20% 20% 20%;
+      margin: 0 9rem 0 2.5rem;
+      padding: 6.6% 0 0 0.3rem; } }
 
 .button-green {
   width: 20rem;
@@ -262,5 +270,16 @@ footer {
   background-size: 100% auto;
   height: 80rem;
   background-position-y: -45rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+    .container-ecoaliados {
+      background-repeat: no-repeat;
+      height: 59rem;
+      background-position-y: -37rem; } }
+
+.image-tag {
+  list-style: none; }
+  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+    .image-tag {
+      width: 19rem; } }
 
 /*# sourceMappingURL=styles.css.map */

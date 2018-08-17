@@ -1,4 +1,9 @@
 class EcoaliadosController < ApplicationController
-  def ecoaliados
+
+  def index
   end
+
+  def show
+  end
+
 end

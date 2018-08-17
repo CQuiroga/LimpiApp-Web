@@ -223,6 +223,27 @@ footer {
     .right-tag {
       top: 38rem; } }
 
+.tab-ecoaliados {
+  width: 28rem;
+  height: 28rem;
+  background-color: rgba(255, 255, 255, 0.78);
+  border-radius: 16% 16% 16% 16%;
+  margin: 15% 2.5rem 0 2.5rem;
+  padding: 10% 0 0 0.8rem; }
+
+.button-green {
+  width: 20rem;
+  background-color: rgba(0, 150, 136, 0.78);
+  height: 4rem;
+  margin: 8% auto 0 auto;
+  border-radius: 2rem 2rem 2rem 2rem;
+  padding: 0.03rem 0 0 3rem; }
+
+.tabs-flex {
+  display: flex;
+  width: 95%;
+  margin: 0 auto 0 auto; }
+
 .divisor-line {
   color: #fff;
   width: 5.5rem;
@@ -235,5 +256,11 @@ footer {
 
 .graycolor a {
   color: #666; }
+
+.container-ecoaliados {
+  background-image: url("/assets/ecoaliados_background.jpg");
+  background-size: 100% auto;
+  height: 80rem;
+  background-position-y: -45rem; }
 
 /*# sourceMappingURL=styles.css.map */

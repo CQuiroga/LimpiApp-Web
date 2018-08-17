@@ -5,6 +5,7 @@ $gray-light: #f8f8f8
 $gray: #e2e2e2
 $txt-color: #666
 $green : #456789
+$green-transparent: rgba(0, 150, 136, 0.78)
 $background-header: #095A51
 $white : #fff
 $link-hover: rgba(0, 150, 136, 0.78)
@@ -225,12 +226,33 @@ footer
     margin-right: 3rem
     position: fixed
     right: -3rem
-    background-color: rgba(0, 150, 136, 0.78)
+    background-color: $green-transparent
     z-index: 999
     top: 50rem
     padding: 1rem 0 0 .5rem
     @media screen and (min-width: $laptop-min) and (max-width: $laptop-max)
       top: 38rem
+
+.tab-ecoaliados
+  width: 28rem
+  height: 28rem
+  background-color: rgba(255, 255, 255, 0.78)
+  border-radius: 16% 16% 16% 16%
+  margin: 15% 2.5rem 0 2.5rem
+  padding: 10% 0 0 .8rem
+
+.button-green
+  width: 20rem
+  background-color: $green-transparent
+  height: 4rem
+  margin: 8% auto 0 auto
+  border-radius: 2rem 2rem 2rem 2rem
+  padding: .03rem 0 0 3rem
+
+.tabs-flex
+  display: flex
+  width: 95%
+  margin: 0 auto 0 auto
 
 .divisor-line
   color: $white
@@ -244,3 +266,9 @@ footer
 
 .graycolor a
   color: $txt-color
+
+.container-ecoaliados
+  background-image: url('/assets/ecoaliados_background.jpg')
+  background-size: 100%  auto
+  height: 80rem
+  background-position-y: -45rem

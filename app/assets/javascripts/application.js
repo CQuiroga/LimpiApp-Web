@@ -35,9 +35,15 @@ $('.imgs-center').mouseenter(function () {
 });
 
 $('.imgs-center').mouseleave(function () {
+
   $(this).animate({marginTop: "+=50px"}, 200).css({'color':'#666'});
   $('.graycolor a').css({'color':'#666'});
 
 });
+
+/*- - - - animar tabs sección "Ecoaliados" - - */
+
+ $('.tab-ecoaliados').slideUp(100).delay( 3000 ).fadeIn( 1000 );
+
  event.preventDefault();
 })

@@ -1,16 +1,77 @@
 
 // variables
-$txt-size: 1rem
+$txt-size: 1.4rem
+$gray-light: #f8f8f8
+$gray: #e2e2e2
 $txt-color: #666
 $green : #456789
+$green-transparent: rgba(0, 150, 136, 0.78)
 $background-header: #095A51
 $white : #fff
 $link-hover: rgba(0, 150, 136, 0.78)
+
+// tamaños para responsive
+$laptop-min : 1024px
+$laptop-max : 1350px
+
+.main-color
+  color: $background-header !important
+
+.main-color a
+    color: $background-header !important
+
+.main-color:link
+  color: $background-header !important
 
 body
   font-size: $txt-size
   color: $txt-color
   margin: 0
+
+h2
+  @media screen and (min-width: $laptop-min) and (max-width: $laptop-max)
+    font-size: 23px
+
+.contenedor
+  width: 100rem
+  margin: auto auto 15rem auto
+  text-align: justify
+
+.center
+  width: 50rem
+  margin: 0 auto 0 auto
+
+.table-gray-light
+  background-color: $gray-light
+  -webkit-align-self: center
+  align-self: center
+  margin: 0
+  padding: .5rem
+  width: 21rem
+
+.table-gray
+  background-color: $gray
+  -webkit-align-self: center
+  align-self: center
+  margin: 0
+  padding: .5rem
+  width: 21rem
+
+.table-gray-light-slow
+  background-color: $gray-light
+  -webkit-align-self: center
+  align-self: center
+  margin: 0
+  padding: .5rem
+  width: 16.5rem
+
+.table-gray-slow
+  background-color: $gray
+  -webkit-align-self: center
+  align-self: center
+  margin: 0
+  padding: .5rem
+  width: 16.5rem
 
 a:link
   color: #ffffff
@@ -60,22 +121,35 @@ nav
   display: flex
   display: -webkit-flex
   float: right
-  width: 80rem
+  width: 100rem
 
 .search
   font-size: 1rem
   position: absolute
   right: 5rem
   top: 1rem
+  width: 40rem
+  @media screen and (min-width: $laptop-min) and (max-width: $laptop-max)
+    width: 32rem
+
+
+.ingresar
+  display: contents
+
+.menu
+  width: 90rem
 
 .menu
   li
     display: inline-block
     font-size: 2.2rem
-    padding-right: 10rem
+    padding-right: 8rem
     height: 7rem
-    margin-right: 2rem
+    margin-right: 6rem
     padding: 3rem
+    @media screen and (min-width: $laptop-min) and (max-width: $laptop-max)
+      font-size: 1.6rem
+      margin-right: 1rem
 
 li:hover
   background-color: $link-hover
@@ -87,11 +161,14 @@ li:hover
   font-size: 1.5rem
   -webkit-align-self: flex-center
   align-self: flex-center
+  @media screen and (min-width: $laptop-min) and (max-width: $laptop-max)
+    font-size: 1rem
 
 .legal
   position: absolute
   right: 5rem
-
+  @media screen and (min-width: $laptop-min) and (max-width: $laptop-max)
+    font-size: 1rem
 
 .legal a
   color: $white
@@ -120,11 +197,16 @@ li:hover
   display: flex
   width: 166rem
   flex-direction: row
+  @media screen and (min-width: $laptop-min) and (max-width: $laptop-max)
+    width: 100rem
 
 .imgs-center
   width: 49rem
   margin-right: 7rem
   text-align: center
+  @media screen and (min-width: $laptop-min) and (max-width: $laptop-max)
+  font-size: 12px
+  margin-right: 14rem
 
 footer
   background-color: $background-header
@@ -139,14 +221,38 @@ footer
 /*- - - - - estilos para el panel fijo derecho- - - - */
 .right-tag
     float: right !important
-    width: 6.5rem
-    height: 22rem
+    width: 5.5rem
+    height: 21rem
     margin-right: 3rem
     position: fixed
     right: -3rem
-    background-color: $link-hover
+    background-color: $green-transparent
     z-index: 999
     top: 50rem
+    padding: 1rem 0 0 .5rem
+    @media screen and (min-width: $laptop-min) and (max-width: $laptop-max)
+      top: 38rem
+
+.tab-ecoaliados
+  width: 28rem
+  height: 28rem
+  background-color: rgba(255, 255, 255, 0.78)
+  border-radius: 16% 16% 16% 16%
+  margin: 15% 2.5rem 0 2.5rem
+  padding: 10% 0 0 .8rem
+
+.button-green
+  width: 20rem
+  background-color: $green-transparent
+  height: 4rem
+  margin: 8% auto 0 auto
+  border-radius: 2rem 2rem 2rem 2rem
+  padding: .03rem 0 0 3rem
+
+.tabs-flex
+  display: flex
+  width: 95%
+  margin: 0 auto 0 auto
 
 .divisor-line
   color: $white
@@ -160,3 +266,9 @@ footer
 
 .graycolor a
   color: $txt-color
+
+.container-ecoaliados
+  background-image: url('/assets/ecoaliados_background.jpg')
+  background-size: 100%  auto
+  height: 80rem
+  background-position-y: -45rem

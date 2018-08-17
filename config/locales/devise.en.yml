@@ -1,0 +1,64 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+en:
+  devise:
+    confirmations:
+      confirmed: "Tu dirección de Correo ha sido confirmada."
+      send_instructions: "Recibirás un email con instrucciones para condirmar tu correo en unos minutos."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+    failure:
+      already_authenticated: "Ya haz inicado sesión."
+      inactive: "Tu cuenta no se ha activado."
+      invalid: "Invalida %{authentication_keys} o contraseña."
+      locked: "Tu cuenta se encuentra bloqueada."
+      last_attempt: "Haz exedido los intentos permitidos, tu cuenata ha sido bloqueada. "
+      not_found_in_database: "Invalida %{authentication_keys} o contraseña."
+      timeout: "Tu sesión ha expirado. Por favor ingresa de nuevo."
+      unauthenticated: "Necesitas registrarte o iniciar sesión para poder continuar."
+      unconfirmed: "Necesitas confirmar tu dirección de correo electrónico para poder continuar."
+    mailer:
+      confirmation_instructions:
+        subject: "Instrucciones de confirmación"
+      reset_password_instructions:
+        subject: "Instrucciones de cambio de contraseña"
+      unlock_instructions:
+        subject: "Instrucciones de desbloqueo"
+      email_changed:
+        subject: "Correo electrónico cambiado"
+      password_change:
+        subject: "Contraseña cambiada"
+    omniauth_callbacks:
+      failure: "No te has podido autenticar como %{kind} debido a \"%{reason}\"."
+      success: "Autenticación satisfactoria como %{kind} cuenta."
+    passwords:
+      no_token: "No tienes acceso a esta página mientras no recibas un correo de reestablecimiento de contraseña. Si no recibes el correo, asegurate de estar en la URL correcta."
+      send_instructions: "Recibirás un correo con instrucciones de reestablecimiento en unos minutos."
+      send_paranoid_instructions: "Si tu correo actualmente existe en nuestra base de datos, recibirás instrucciones de recuperación de contraseña en unos minutos."
+      updated: "Tu contraseña ha sido cambiada satisfactoriamente. Has iniciado sesión satisfactoriamente."
+      updated_not_active: "Tu contraseña ha sido actualizada satisfactoriamente."
+    registrations:
+      destroyed: "Te extrañaremos! tu cuenta ha sido cancelada."
+      signed_up: "Bienvenido, has iniciado sesión satistactoriammente."
+      signed_up_but_inactive: "Has iniciado sasión satisfactoriamente."
+      signed_up_but_locked: "Has iniciado sasión satisfactoriamente."
+      signed_up_but_unconfirmed: "Un link de confirmación ha sido enviado a tu correo. Por favor da click en el link para activar tu cuenta."
+      update_needs_confirmation: "Se ha actualizado tu cuenta satisfactoriamente, Pero necesitamos verificar tu cuenta de correo. Por favor verifica tu bandeja de correo con un link de confirmación de cuenta."
+      updated: "Tu cuenta ha sido actualizada satisfactoriamente."
+    sessions:
+      signed_in: "Has ingresado satisfactoriamente."
+      signed_out: "Has cerrado sesión satisfactoriamente."
+      already_signed_out: "Has cerrado sesión satisfactoriamente."
+    unlocks:
+      send_instructions: "Recibirás un correo con instrucciones para desbloquear tu cuenta en unos minutos."
+      send_paranoid_instructions: "Si tu cuenta existe, recibirás un correo para desbloquearla en unos minutos."
+      unlocked: "Tu cuenta ha sido desbloqueada satisfactoeiamente. Por favor inicia sesión para continuar."
+  errors:
+    messages:
+      already_confirmed: "Ya ha sido confirmada, Por favor inicia sesión de nuevo."
+      confirmation_period_expired: "Necesita ser confirmado en %{period}, por favor solicita nuevamente una."
+      expired: "Ha expirado, por favor solicita nuevamente una."
+      not_found: "No encontrado."
+      not_locked: "No se encontraba bloqueado."
+      not_saved:
+        one: "1 error, esto es prohibido %{resource} de ser guardado:"
+        other: "%{count} errores, esto es prohibido %{resource} de ser guardado:"

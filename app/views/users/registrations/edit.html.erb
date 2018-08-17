@@ -1,0 +1,82 @@
+<div class="contenedor">
+      <div class="center">
+        <h2>Editar <%= current_user.nombre %></h2>
+        <p>&nbsp;</p>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+          <%= f.label "Primer nombre:" %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= f.text_field :nombre, autofocus: true  %><br /><br />
+        </div>
+
+        <div class="field">
+          <%= f.label "Primer apellido:" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= f.text_field :apellido, autofocus: true %><br /><br />
+        </div>
+
+        <div class="field">
+          <%= f.label "N° de documento:" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= f.text_field :cedula, autofocus: true %><br /><br />
+        </div>
+
+        <div class="field">
+          <%= f.label "Dirección residencia:" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= f.text_field :direccion, autofocus: true %><br /><br />
+        </div>
+
+        <div class="field">
+          <%= f.label "Correo electrónico:" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= f.email_field :email, autofocus: true %><br /><br />
+        </div>
+
+        <div class="field">
+          <%= f.label "Teléfono de contacto:" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= f.text_field :telefono, autofocus: true %><br /><br />
+        </div>
+
+        <div class="field">
+          <%= f.label "Localidad residencia:" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <%= f.text_field :localidad, autofocus: true %><br /><br />
+        </div>
+
+        <div class="field">
+          <%= f.label "Número tarjeta: " %><i>(SITP o Transmilenio)</i><br />
+          <%= f.text_field :tarjeta, autofocus: true %><br /><br />
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>sperando confirmación de: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label "Escoje una contraseña" %> <i>(Dejar en blanco si no deseas cambiarla)</i> &nbsp;
+          <%= f.password_field :password, autocomplete: "off" %>
+          <% if @minimum_password_length %>
+
+            <em><%= @minimum_password_length %> Caractéres mínimo</em><br />
+          <% end %>
+        </div>
+
+        <div class="field">
+          <%= f.label "Repetir contraseña" %><br />
+          <%= f.password_field :password_confirmation %> <br />
+        </div>
+
+        <div class="field">
+          <%= f.label "Contraseña actual" %> <i>(Necesitas una contraseña para confirmar los cambios)</i> &nbsp;
+          <%= f.password_field :current_password %> <br /><br />
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Actualizar" %>
+        </div>
+      <% end %>
+
+      <h3>Cancelar cuenta</h3>
+
+      <p>Deseas cancelar tu cuenta? <%= button_to "Si, cancelar", registration_path(resource_name), data: { confirm: "Estas seguro?" }, method: :delete %></p>
+
+      <%= link_to "Back", :back %>
+  </div>
+</div>

@@ -24,34 +24,58 @@
             </div>
 
             <div class="header-right">
-
               <div class="search">
-                <p class="white">
-                  <span><%= link_to_unless_current 'Registrarse', :action => 'registro', :controller => 'registro' %> </span>|
-                  <span> <%= link_to_unless_current 'Iniciar Sesión', :action => 'login', :controller => 'login' %></span>
+                <p class="navbar-text pull-right white ingresar">
+                    <span>
+                      <% if user_signed_in? %>
+                        Has iniciado sesión como <strong><%= current_user.nombre %> |</strong>
+                        <i class="fa fa-wrench white"></i>
+                        <%= link_to 'Editar Perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+                        <i class="fa fa-sign-out white"></i>
+                        <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                        <% else %>
+                        <i class="fa fa-user white"></i>
+                        <%= link_to "Registrarse", new_user_registration_path, :class => 'navbar-link'  %> |
+                        <i class="fa fa-unlock-alt white"></i>
+                        <%= link_to "Ingresar", new_user_session_path, :class => 'navbar-link'  %>
+
+                      <% end %>
+                      <p></p>
+                  </span>
                 </p>
                 <input type="search">
                 <button type="button"> Buscar</button>
+
               </div>
+
+
 
               <nav>
                 <ul class="menu">
                   <li class="white nav"><%= link_to_unless_current 'Inicio', :root %></li>
-                  <li class="white nav"><%= link_to_unless_current 'Acerca De', :action=>'acercade', :controller=> 'acercade' %></li>
-                  <li class="white nav"><%= link_to_unless_current 'Eventos', :action=>'eventos', :controller=> 'eventos' %></li>
-                  <li class="white nav"><%= link_to_unless_current 'Contacto', :action=>'contacto', :controller=> 'contacto' %> </li>
+                  <li class="white nav"><%= link_to_unless_current 'Acerca De', acercade_acercade_path %></li>
+                  <li class="white nav"><%= link_to_unless_current 'Eventos', eventos_eventos_path %></li>
+                  <li class="white nav"><%= link_to_unless_current 'Contacto', contactos_path %> </li>
                 </ul>
               </nav>
+
             </div>
       </header>
       <!--Fix right-->
       <div class="right-tag">
-        <p><%=link_to_unless_current image_tag('recientes.png'), :action => 'recientes', :controller => 'recientes' %></p>
+        <p><%=link_to_unless_current image_tag('facebook.png'), 'https://facebook.com/fedesoftcol', target: '_blank' %></p>
         <hr class="divisor-line">
-        <p><%=link_to_unless_current image_tag('favoritos.png'), :action => 'favoritos', :controller => 'favoritos' %></p>
+        <p><%=link_to_unless_current image_tag('twitter.png'), 'https://twitter.com/fedesoftcol', target: '_blank' %></p>
         <hr class="divisor-line">
-        <p><%=link_to_unless_current image_tag('p_cercanos.png'), :action => 'puntos_cercanos', :controller => 'puntos_cercanos' %></p>
+        <p><%=link_to_unless_current image_tag('youtube.png'), 'https://www.youtube.com/channel/UCyjvUDXyN-0bwtvUZlT2bvQ', target: '_blank' %></p>
       </div>
+
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
 
     <%= yield %>
 
@@ -60,9 +84,9 @@
           <span class=" white" >Copyright ©  Todos los derechos reservados 2018 • Diseñado y administrado por SCL Developers </span>
       </div>
       <div class="legal">
-        <p>
-        <%= link_to_unless_current 'Política de Privacidad', :action=>'politica', :controller=> 'politica' %> •
-        <%= link_to_unless_current 'Términos y Condiciones', :action=>'terminos', :controller=> 'terminos' %>
+        <p class="white">
+        <%= link_to_unless_current 'Política de Privacidad', politica_politica_path %> •
+        <%= link_to_unless_current 'Términos y Condiciones', terminos_terminos_path %>
         </p>
       </div>
     </footer>

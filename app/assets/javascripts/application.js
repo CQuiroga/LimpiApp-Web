@@ -47,3 +47,4 @@ $('.imgs-center').mouseleave(function () {
 
  event.preventDefault();
 })
+/*- - - end - - -*/

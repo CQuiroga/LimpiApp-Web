@@ -14,9 +14,9 @@
     <% if user_signed_in? %>
     <table>
       <tr>
-        <th><h3 class="table-gray main-color">Nombre:</h3></th>&nbsp;&nbsp;&nbsp;
-        <th><h3 class="table-gray main-color">Mensaje:</h3></th>
-        <th><h3 class="table-gray main-color">&nbsp;</h3></th>
+        <th><h4 class="table-gray main-color">Nombre:</h4></th>&nbsp;&nbsp;&nbsp;
+        <th><h4 class="table-gray main-color">Mensaje:</h4></th>
+        <th><h4 class="table-gray main-color">&nbsp;</h4></th>
 
       </tr>
     <% @contactos.each do |contacto| %>
@@ -44,8 +44,14 @@
     <% end %>
     <br />
     <br />
-    <h4 class="main-color a">
-    <%= link_to 'Enviar un mensaje', new_contacto_path %>
-    </h4>
+
+    <div class="center">
+      <div class="button-green">
+        <h4 class="white">
+      <%= link_to 'Enviar un mensaje', new_contacto_path %>
+      </h4>
+      </div>
+    </div>
+    
   </div>
 </div>

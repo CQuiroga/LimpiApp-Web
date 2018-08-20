@@ -96,6 +96,9 @@ a:hover {
 .white {
   color: #fff; }
 
+.background-white {
+  background-color: #fff; }
+
 header {
   background-color: #095A51;
   width: 100%;
@@ -283,8 +286,14 @@ footer {
   background-size: 100% auto;
   height: 80rem;
   background-position-y: -45rem; }
+
+.container-eventos {
+  background-image: url("/assets/eventos_background.jpg");
+  background-size: 100% auto;
+  height: 103rem;
+  background-position-y: -45rem; }
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
-    .container-ecoaliados {
+    .container-eventos {
       background-repeat: no-repeat;
       height: 59rem;
       background-position-y: -37rem; } }
@@ -294,5 +303,16 @@ footer {
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
     .image-tag {
       width: 19rem; } }
+
+/*- - - - estilos para calendario de eventos - - - */
+#loading {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+#calendar {
+  max-width: 900px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=styles.css.map */

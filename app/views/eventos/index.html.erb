@@ -1,2 +1,31 @@
-<h1>Eventos</h1>
-<p>Calendario con fechas preseñaladas de actividades especiales relacionadas con el reciclaje y medio ambiente</p>
+<%= stylesheet_link_tag 'fullcalendar.min.css', media: 'all' %>
+<%= stylesheet_link_tag 'fullcalendar.print.min.css', media: 'print' %>
+<%= javascript_include_tag 'moment.min.js' %>
+<%= javascript_include_tag 'fullcalendar.min.js' %>
+<%= javascript_include_tag 'gcal.min.js' %>
+
+<div class="container-eventos">
+  <br />
+  <br />
+<div class="contenedor">
+
+  <div class="center">
+
+
+      <h1 class="main-color"><i class="fa fa-recycle"></i> Eventos</h1>
+      <hr>
+      <p></p>
+      <p>Publicaremos fechas importantes relacionadas con el reciclaje y medio ambiente por este medio, puedes agregarlas a tu calendario de Google para recibir notificaciones.
+      </p>
+      <br />
+      <br />
+  </div>
+
+
+
+<div id='loading'>loading...</div>
+
+<div id='calendar' class='background-white' style="padding-top: 1.5rem;"></div>
+<br />
+</div>
+</div>

@@ -16,6 +16,7 @@
 //= require_tree .
 //= require jquery3
 //= require jquery_ujs
+//= require gmaps/google
 
 
 /*- - - - - animación para el logo - - - -*/
@@ -77,6 +78,3 @@ $('#calendar').fullCalendar({
   }
 
 });
-
- event.preventDefault();
-})

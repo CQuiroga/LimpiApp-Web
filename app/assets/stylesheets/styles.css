@@ -315,4 +315,9 @@ footer {
   max-width: 900px;
   margin: 0 auto; }
 
+/*- - - - mapa de Mis Rutas - - - */
+#map {
+  width: 100%;
+  height: 50rem; }
+
 /*# sourceMappingURL=styles.css.map */

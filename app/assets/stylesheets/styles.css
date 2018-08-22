@@ -255,6 +255,22 @@ footer {
       margin: 0 9rem 0 2.5rem;
       padding: 6.6% 0 0 0.3rem; } }
 
+.tab-cultura {
+  width: 28rem;
+  height: 28rem;
+  background-color: rgba(255, 255, 255, 0.78);
+  border-radius: 16% 16% 16% 16%;
+  margin: 15% 2.5rem 0 2.5rem;
+  padding: 1% 0 0 0.8rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .tab-cultura {
+      width: 20rem;
+      height: 20rem;
+      background-color: rgba(255, 255, 255, 0.78);
+      border-radius: 20% 20% 20% 20%;
+      margin: 0 9rem 0 2.5rem;
+      padding: 0 0 0 0.3rem; } }
+
 .button-green {
   width: 20rem;
   background-color: rgba(0, 150, 136, 0.78);
@@ -286,6 +302,22 @@ footer {
   background-size: 100% auto;
   height: 80rem;
   background-position-y: -45rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .container-ecoaliados {
+      background-repeat: no-repeat;
+      height: 59rem;
+      background-position-y: -37rem; } }
+
+.container-cultura {
+  background-image: url("/assets/cultura-background.jpg");
+  background-size: 100% auto;
+  height: 80rem;
+  background-position-y: -36rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .container-cultura {
+      background-repeat: no-repeat;
+      height: 59rem;
+      background-position-y: -37rem; } }
 
 .container-eventos {
   background-image: url("/assets/eventos_background.jpg");

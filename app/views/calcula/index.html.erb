@@ -1,0 +1,382 @@
+<script type="text/javascript">
+/* - - - -script para calculadora - - -*/
+console.log('calculadora ok');
+function calcularPuntos(){
+//inputs para pedir datos
+var peso = parseFloat(document.getElementById('peso').value);
+var distancia =  parseFloat(document.getElementById('distancia').value);
+
+/* precios reales en el mercado según tipo de material (pesos colombianos por kilo)
+
+Aluminio = $1388.64, transporte = $ 1100
+Acero = $47.34, transporte = $ 2500
+Balastros = $220.92, transporte = $ 800
+Bronce = $16079.78, transporte = $ 2100
+Cartón = $63.12, transporte = $ 600
+Chatarra = $544.41, transporte = $ 1600
+Cobre = $12040.11, transporte = $ 2200
+Electrodomésticos = $2040.17, transporte = $ 1800
+Papel = $157.8, transporte = $ 350
+PET = $1499.1, transporte = $ 200
+Pilas / Baterías = $3270.15, transporte = $ 900
+Plástico = $189.36, transporte = $ 190
+Plomo = $2840.39, transporte = $ 1450
+Vidrio = $15.78, transporte = $ 400
+*/
+//variables
+var aluminio = 1388.64;
+var acero = 47.34;
+var balastros = 220.92;
+var bronce = 16079.78;
+var carton = 63.12;
+var chatarra = 544.41;
+var cobre = 12040.11;
+var electrodomésticos = 2040.17;
+var papel = 157.8;
+var pet = 1499.1;
+var pilasbaterias = 3270.15;
+var plastico = 189.36;
+var plomo = 2840.39;
+var vidrio = 15.78;
+var total= 0;
+
+
+var material = parseInt(document.getElementById('material').value);
+var respuesta= '';
+var info;
+
+boton = `<br />
+<br />
+<div class="center">
+  <div class="button-green">
+    <h4 class="white">
+  <%= link_to 'Solicita recolección', contactos_path %>
+  </h4>
+  </div>
+</div>`;
+//validaciones
+switch (material){
+  case 1: info = 'Aluminio';
+  total = peso * aluminio;
+  //redondeo
+  var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+  if (distancia<=5) {
+    var valor = 'Gratis';
+  }
+  else {
+     var free = distancia*1100;
+      valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+  };
+  respuesta += ` <ul class="collection with-header">
+  <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+  <li class="collection-item">total puntos: ${roundTotal}</div></li>
+  <li class="collection-item">Costo recolección: ${valor}</div></li>
+  </ul> `;
+  $('#respuestausr').html(respuesta).append(boton);
+  break;
+
+  case 2: info = 'Acero';
+  total = peso * acero;
+  //redondeo
+  var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+  if (distancia<=5) {
+    var valor = 'Gratis';
+  }
+  else {
+     var free = distancia*2500;
+      valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+  };
+  respuesta += ` <ul class="collection with-header">
+  <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+  <li class="collection-item">total puntos: ${roundTotal}</div></li>
+  <li class="collection-item">Costo recolección: ${valor}</div></li>
+  </ul> `;
+  $('#respuestausr').html(respuesta).append(boton);
+    break;
+
+  case 3: info = 'Balastros';
+  total = peso * balastros;
+  //redondeo
+  var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+  if (distancia<=5) {
+    var valor = 'Gratis';
+  }
+  else {
+     var free = distancia*800;
+      valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+  };
+  respuesta += ` <ul class="collection with-header">
+  <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+  <li class="collection-item">total puntos: ${roundTotal}</div></li>
+  <li class="collection-item">Costo recolección: ${valor}</div></li>
+  </ul> `;
+  $('#respuestausr').html(respuesta).append(boton);
+    break;
+
+  case 4: info = 'Bronce';
+  total = peso * bronce;
+  //redondeo
+  var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+  if (distancia<=5) {
+    var valor = 'Gratis';
+  }
+  else {
+     var free = distancia*2100;
+      valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+  };
+  respuesta += ` <ul class="collection with-header">
+  <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+  <li class="collection-item">total puntos: ${roundTotal}</div></li>
+  <li class="collection-item">Costo recolección: ${valor}</div></li>
+  </ul> `;
+  $('#respuestausr').html(respuesta).append(boton);
+    break;
+
+  case 5: info = 'Cartón';
+  total = peso * carton;
+  //redondeo
+  var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+  if (distancia<=5) {
+    var valor = 'Gratis';
+  }
+  else {
+     var free = distancia*600;
+      valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+  };
+  respuesta += ` <ul class="collection with-header">
+  <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+  <li class="collection-item">total puntos: ${roundTotal}</div></li>
+  <li class="collection-item">Costo recolección: ${valor}</div></li>
+  </ul> `;
+  $('#respuestausr').html(respuesta).append(boton);
+    break;
+
+  case 6: info = 'Chatarra';
+  total = peso * chatarra;
+  //redondeo
+  var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+  if (distancia<=5) {
+    var valor = 'Gratis';
+  }
+  else {
+     var free = distancia*1600;
+      valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+  };
+  respuesta += ` <ul class="collection with-header">
+  <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+  <li class="collection-item">total puntos: ${roundTotal}</div></li>
+  <li class="collection-item">Costo recolección: ${valor}</div></li>
+  </ul> `;
+  $('#respuestausr').html(respuesta).append(boton);
+    break;
+
+    case 7: info = 'Cobre';
+    total = peso * cobre;
+    //redondeo
+    var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+    if (distancia<=5) {
+      var valor = 'Gratis';
+    }
+    else {
+       var free = distancia*2200;
+        valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+    };
+    respuesta += ` <ul class="collection with-header">
+    <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+    <li class="collection-item">total puntos: ${roundTotal}</div></li>
+    <li class="collection-item">Costo recolección: ${valor}</div></li>
+    </ul> `;
+    $('#respuestausr').html(respuesta).append(boton);
+    break;
+
+    case 8: info = 'Electrodomésticos';
+    total = peso * electrodomésticos;
+    //redondeo
+    var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+    if (distancia<=5) {
+      var valor = 'Gratis';
+    }
+    else {
+       var free = distancia*1800;
+        valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+    };
+    respuesta += ` <ul class="collection with-header">
+    <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+    <li class="collection-item">total puntos: ${roundTotal}</div></li>
+    <li class="collection-item">Costo recolección: ${valor}</div></li>
+    </ul> `;
+    $('#respuestausr').html(respuesta).append(boton);
+      break;
+
+    case 9: info = 'Papel';
+    total = peso * papel;
+    //redondeo
+    var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+    if (distancia<=5) {
+      var valor = 'Gratis';
+    }
+    else {
+       var free = distancia*350;
+        valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+    };
+    respuesta += ` <ul class="collection with-header">
+    <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+    <li class="collection-item">total puntos: ${roundTotal}</div></li>
+    <li class="collection-item">Costo recolección: ${valor}</div></li>
+    </ul> `;
+    $('#respuestausr').html(respuesta).append(boton);
+      break;
+
+    case 10: info = 'PET';
+    total = peso * pet;
+    //redondeo
+    var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+    if (distancia<=5) {
+      var valor = 'Gratis';
+    }
+    else {
+       var free = distancia*200;
+        valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+    };
+    respuesta += ` <ul class="collection with-header">
+    <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+    <li class="collection-item">total puntos: ${roundTotal}</div></li>
+    <li class="collection-item">Costo recolección: ${valor}</div></li>
+    </ul> `;
+    $('#respuestausr').html(respuesta).append(boton);
+      break;
+
+    case 11: info = 'Pilas / Baterías';
+    total = peso * pilasbaterias;
+    //redondeo
+    var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+    if (distancia<=5) {
+      var valor = 'Gratis';
+    }
+    else {
+       var free = distancia*900;
+        valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+    };
+    respuesta += ` <ul class="collection with-header">
+    <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+    <li class="collection-item">total puntos: ${roundTotal}</div></li>
+    <li class="collection-item">Costo recolección: ${valor}</div></li>
+    </ul> `;
+    $('#respuestausr').html(respuesta).append(boton);
+      break;
+
+    case 12: info = 'Plástico';
+    total = peso * plastico;
+    //redondeo
+    var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+    if (distancia<=5) {
+      var valor = 'Gratis';
+    }
+    else {
+       var free = distancia*190;
+        valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+    };
+    respuesta += ` <ul class="collection with-header">
+    <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+    <li class="collection-item">total puntos: ${roundTotal}</div></li>
+    <li class="collection-item">Costo recolección: ${valor}</div></li>
+    </ul> `;
+    $('#respuestausr').html(respuesta).append(boton);
+      break;
+
+    case 13: info = 'Plomo';
+    total = peso * plomo;
+    //redondeo
+    var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+    if (distancia<=5) {
+      var valor = 'Gratis';
+    }
+    else {
+       var free = distancia*1450;
+        valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+    };
+    respuesta += ` <ul class="collection with-header">
+    <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+    <li class="collection-item">total puntos: ${roundTotal}</div></li>
+    <li class="collection-item">Costo recolección: ${valor}</div></li>
+    </ul> `;
+    $('#respuestausr').html(respuesta).append(boton);
+      break;
+
+    case 14: info = 'Vidrio';
+    total = peso * vidrio;
+    //redondeo
+    var roundTotal = parseFloat(Math.round(total * 100) / 100).toFixed(0);
+    if (distancia<=5) {
+      var valor = 'Gratis';
+    }
+    else {
+       var free = distancia*400;
+        valor = '$ ' + free + ' pesos ' + 'ó ' + free/2 + ' puntos'
+    };
+    respuesta += ` <ul class="collection with-header">
+    <li class="collection-header"><h4>Cálculo para ${peso} kilos de material reciclado: ${info}</h4></li>
+    <li class="collection-item">total puntos: ${roundTotal}</div></li>
+    <li class="collection-item">Costo recolección: ${valor}</div></li>
+    </ul> `;
+
+    $('#respuestausr').html(respuesta).append(boton);
+      break;
+
+  default: info ='No se establecio el tipo de envio'
+}
+}
+
+</script>
+<div class="contenedor">
+  <div class="center">
+      <h1 class="main-color"><i class="fa fa-recycle"></i> Calcula</h1>
+      <hr>
+      <p></p>
+      <p>Calcula cuántos puntos puedes obtener por clasificar tus residuos, indicanos cuánto pesa tu reciclaje y a que
+      distancia te encuentras de nuestros puntos de recolección (<span class="main-color"><%= link_to 'ver puntos', rutas_path %></span>), si te encuentras a menos de seis kilometros, lo recogeremos sin costo alguno.
+     <br />
+     <br />
+     Puedes remir estos puntos por pasajes de transmileno o SITP, un pasaje equivale a 2000 puntos.</p>
+      <br />
+      <br />
+      <div class="input-field">
+        <label>Tipo de residuo</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <select id = 'material'>
+          <option value="" disabled selected> Tipo de residuo</option>
+          <option value="1">Aluminio</option>
+          <option value="2">Acero</option>
+          <option value="3">Balastros</option>
+          <option value="4">Bronce</option>
+          <option value="5">Cartón</option>
+          <option value="6">Chatarra (Acero)</option>
+          <option value="7">Cobre</option>
+          <option value="8">Electrodomésticos</option>
+          <option value="9">Papel</option>
+          <option value="10">PET</option>
+          <option value="11">Pilas / Baterías</option>
+          <option value="12">Plástico</option>
+          <option value="13">Plomo</option>
+          <option value="14">Vidrio</option>
+        </select>
+      </div>
+      <br />
+      Peso (Kilogramos)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="number" name="peso" id="peso"><br><br>
+      Distancia (Kilometros)
+      <input type="number" name="Distancia" id="distancia"><br><br>
+
+      <button onclick="calcularPuntos()" type="submit" name="action">Calcular
+    </button>
+    <br />
+    <br />
+
+  <!-- <div id="totalPagar"></div>
+  <div id="costoCliente"></div> -->
+
+  <div id="respuestausr"></div>
+
+
+  </div>
+</div>

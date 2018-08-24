@@ -1,4 +1,8 @@
 class EventosController < ApplicationController
-  def eventos
+
+  def index
+  end
+  
+  def show
   end
 end

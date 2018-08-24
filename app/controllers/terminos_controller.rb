@@ -1,4 +1,5 @@
 class TerminosController < ApplicationController
-  def terminos
+
+  def index
   end
 end

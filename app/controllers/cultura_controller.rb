@@ -1,4 +1,4 @@
 class CulturaController < ApplicationController
-  def cultura
+  def index
   end
 end

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ruta:</strong>
+  <%= @rutum.ruta %>
+</p>
+
+<p>
+  <strong>Latitud:</strong>
+  <%= @rutum.latitud %>
+</p>
+
+<p>
+  <strong>Longitud:</strong>
+  <%= @rutum.longitud %>
+</p>
+
+<%= link_to 'Edit', edit_rutum_path(@rutum) %> |
+<%= link_to 'Back', ruta_path %>

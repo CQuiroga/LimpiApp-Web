@@ -1,0 +1,29 @@
+
+<div class="container-cultura">
+  <div class="contenedor">
+      <p>&nbsp;</p>
+      <h1 class="white"><i class="fa fa-recycle"></i>&nbsp; Cultura</h1>
+      <hr>
+      <p>&nbsp;</p>
+      <div class="tabs-flex">
+        <div class="tab-cultura">
+
+          <%= link_to_unless_current image_tag('aprende.png', :class => 'image-tag'), aprende_index_path %>
+
+        </div>
+        <div class="tab-cultura">
+
+          <%= link_to_unless_current image_tag('calcula.png', :class => 'image-tag'), calcula_index_path %>
+
+        </div>
+        <div class="tab-cultura">
+
+          <%= link_to_unless_current image_tag('practica.png', :class => 'image-tag'), practica_index_path %>
+
+        </div>
+      </div>
+      <br />
+      <br />
+
+  </div>
+</div>

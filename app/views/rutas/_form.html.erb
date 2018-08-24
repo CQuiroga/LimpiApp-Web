@@ -1,0 +1,32 @@
+<%= form_with(model: rutum, local: true) do |form| %>
+  <% if rutum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rutum.errors.count, "error") %> prohibited this rutum from being saved:</h2>
+
+      <ul>
+      <% rutum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ruta %>
+    <%= form.text_field :ruta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitud %>
+    <%= form.text_field :latitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitud %>
+    <%= form.text_field :longitud %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

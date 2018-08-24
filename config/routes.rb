@@ -18,11 +18,9 @@ Rails.application.routes.draw do
     resources :aprende
     resources :practica
     resources :calcula
+    resources :beneficios
 
-    get 'puntos_cercanos/puntos_cercanos'
-    get 'favoritos/favoritos'
-    get 'recientes/recientes'
-    get 'beneficios/beneficios'
+
     get 'home/index'
     root 'home#index'
   end

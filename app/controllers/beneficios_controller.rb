@@ -1,4 +1,4 @@
 class BeneficiosController < ApplicationController
-  def beneficios
+  def index
   end
 end

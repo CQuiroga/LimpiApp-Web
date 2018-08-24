@@ -73,6 +73,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #ambiente producción
 group :production do
-  gem "pg"
+  gem 'pg', '~> 1.0'
   gem "rails_12factor"
 end

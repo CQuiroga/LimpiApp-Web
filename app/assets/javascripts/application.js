@@ -32,49 +32,52 @@ $('.logo').mouseleave(function () {
 
 $('.imgs-center').mouseenter(function () {
   $(this).animate({marginTop: "-=50px"}, 200).css({'color':'#095A51'});
-  $('.graycolor a').css({'color':'#666'});
-
+  $('.graycolor a').css({'color':'#666'})
 });
 
 $('.imgs-center').mouseleave(function () {
-
   $(this).animate({marginTop: "+=50px"}, 200).css({'color':'#666'});
-  $('.graycolor a').css({'color':'#666'});
-
+  $('.graycolor a').css({'color':'#666'})
 });
 
 /*- - - - animar tabs sección "Ecoaliados" - - */
 
+console.log('animando ecoaliados');
  $('.tab-ecoaliados').slideUp(100).delay( 3000 ).fadeIn( 1000 );
 
-/*- - - - - - - - Eventos de Google Calendar - - - - - */
+ /*- - - - - - - - Eventos de Google Calendar - - - - - */
 
-$('#calendar').fullCalendar({
+ console.log('Eventos de Google Calendar');
+ $('#calendar').fullCalendar({
 
-  header: {
-    left: 'prev,next today',
-    center: 'title',
-    right: 'month,listYear'
-  },
+   header: {
+     left: 'prev,next today',
+     center: 'title',
+     right: 'month,listYear'
+   },
 
-  displayEventTime: false, // don't show the time column in list view
+   displayEventTime: false, // don't show the time column in list view
 
-  // THIS KEY WON'T WORK IN PRODUCTION!!!
-  // To make your own Google API key, follow the directions here:
-  // http://fullcalendar.io/docs/google_calendar/
-  googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+   // THIS KEY WON'T WORK IN PRODUCTION!!!
+   // To make your own Google API key, follow the directions here:
+   // http://fullcalendar.io/docs/google_calendar/
+   googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
 
-  // US Holidays
-  events: 'en.usa#holiday@group.v.calendar.google.com',
+   // US Holidays
+   events: 'en.usa#holiday@group.v.calendar.google.com',
 
-  eventClick: function(event) {
-    // opens events in a popup window
-    window.open(event.url, 'gcalevent', 'width=700,height=600');
-    return false;
-  },
+   eventClick: function(event) {
+     // opens events in a popup window
+     window.open(event.url, 'gcalevent', 'width=700,height=600');
+     return false;
+   },
 
-  loading: function(bool) {
-    $('#loading').toggle(bool);
-  }
-
-});
+   loading: function(bool) {
+     $('#loading').toggle(bool);
+   }
+ });
+ /* - - - - código adicional aqui - - - */
+ /*- - - - - - - - - - - - - - - - - - -*/
+/*- - - -  end código adicional- - - - -*/
+event.preventDefault();
+})

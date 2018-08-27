@@ -1,4 +1,5 @@
 class PoliticaController < ApplicationController
-  def politica
+
+  def index
   end
 end

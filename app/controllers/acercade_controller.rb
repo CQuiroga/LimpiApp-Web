@@ -1,4 +1,9 @@
 class AcercadeController < ApplicationController
-  def acercade
+
+  def index
+  end
+
+  def show
+
   end
 end

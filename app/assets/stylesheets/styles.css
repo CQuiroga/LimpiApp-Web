@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-color {
   color: #095A51 !important; }
 
@@ -12,13 +13,13 @@ body {
   color: #666;
   margin: 0; }
 
-@media screen and (min-width: 1024px) and (max-width: 1350px) {
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
   h2 {
     font-size: 23px; } }
 
 .contenedor {
   width: 100rem;
-  margin: auto auto 15rem auto;
+  margin: auto auto 5rem auto;
   text-align: justify; }
 
 .center {
@@ -32,6 +33,9 @@ body {
   margin: 0;
   padding: 0.5rem;
   width: 21rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .table-gray-light {
+      width: 23rem; } }
 
 .table-gray {
   background-color: #e2e2e2;
@@ -40,6 +44,9 @@ body {
   margin: 0;
   padding: 0.5rem;
   width: 21rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .table-gray {
+      width: 23rem; } }
 
 .table-gray-light-slow {
   background-color: #f8f8f8;
@@ -47,7 +54,7 @@ body {
   align-self: center;
   margin: 0;
   padding: 0.5rem;
-  width: 16.5rem; }
+  width: 16rem; }
 
 .table-gray-slow {
   background-color: #e2e2e2;
@@ -55,7 +62,7 @@ body {
   align-self: center;
   margin: 0;
   padding: 0.5rem;
-  width: 16.5rem; }
+  width: 16rem; }
 
 a:link {
   color: #ffffff;
@@ -90,6 +97,9 @@ a:hover {
 .white {
   color: #fff; }
 
+.background-white {
+  background-color: #fff; }
+
 header {
   background-color: #095A51;
   width: 100%;
@@ -116,7 +126,7 @@ nav {
   right: 5rem;
   top: 1rem;
   width: 40rem; }
-  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
     .search {
       width: 32rem; } }
 
@@ -125,6 +135,9 @@ nav {
 
 .menu {
   width: 90rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .menu {
+      width: 70rem; } }
 
 .menu li {
   display: inline-block;
@@ -133,7 +146,7 @@ nav {
   height: 7rem;
   margin-right: 6rem;
   padding: 3rem; }
-  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
     .menu li {
       font-size: 1.6rem;
       margin-right: 1rem; } }
@@ -148,16 +161,16 @@ li:hover {
   font-size: 1.5rem;
   -webkit-align-self: flex-center;
   align-self: flex-center; }
-  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
     .copyright {
-      font-size: 1rem; } }
+      font-size: 1.5rem; } }
 
 .legal {
   position: absolute;
   right: 5rem; }
-  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
     .legal {
-      font-size: 1rem; } }
+      font-size: 1.5rem; } }
 
 .legal a {
   color: #fff; }
@@ -176,6 +189,9 @@ li:hover {
   flex-shrink: 0;
   flex-basis: 3%;
   margin: 10px; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .item {
+      flex-basis: 4%; } }
 
 .item1 {
   -webkit-flex-basis: 70%;
@@ -186,16 +202,27 @@ li:hover {
   display: flex;
   width: 166rem;
   flex-direction: row; }
-  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
     .table-item {
       width: 100rem; } }
+
+.table-item-big {
+  display: -webkit-flex;
+  display: flex;
+  width: 35%;
+  flex-direction: row;
+  margin: 0 auto 0 auto; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .table-item-big {
+      width: 50%; } }
 
 .imgs-center {
   width: 49rem;
   margin-right: 7rem;
   text-align: center;
+  width: 20rem;
   font-size: 12px;
-  margin-right: 14rem; }
+  margin-right: 18rem; }
 
 footer {
   background-color: #095A51;
@@ -219,7 +246,7 @@ footer {
   z-index: 999;
   top: 50rem;
   padding: 1rem 0 0 0.5rem; }
-  @media screen and (min-width: 1024px) and (max-width: 1350px) {
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
     .right-tag {
       top: 38rem; } }
 
@@ -230,6 +257,30 @@ footer {
   border-radius: 16% 16% 16% 16%;
   margin: 15% 2.5rem 0 2.5rem;
   padding: 10% 0 0 0.8rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .tab-ecoaliados {
+      width: 20rem;
+      height: 20rem;
+      background-color: rgba(255, 255, 255, 0.78);
+      border-radius: 20% 20% 20% 20%;
+      margin: 0 9rem 0 2.5rem;
+      padding: 6.6% 0 0 0.3rem; } }
+
+.tab-cultura {
+  width: 28rem;
+  height: 28rem;
+  background-color: rgba(255, 255, 255, 0.78);
+  border-radius: 16% 16% 16% 16%;
+  margin: 15% 2.5rem 0 2.5rem;
+  padding: 1% 0 0 0.8rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .tab-cultura {
+      width: 20rem;
+      height: 20rem;
+      background-color: rgba(255, 255, 255, 0.78);
+      border-radius: 20% 20% 20% 20%;
+      margin: 0 9rem 0 2.5rem;
+      padding: 0 0 0 0.3rem; } }
 
 .button-green {
   width: 20rem;
@@ -258,9 +309,77 @@ footer {
   color: #666; }
 
 .container-ecoaliados {
-  background-image: url("/assets/ecoaliados_background.jpg");
+  background-image: url("ecoaliadosbackground.jpg");
   background-size: 100% auto;
   height: 80rem;
   background-position-y: -45rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .container-ecoaliados {
+      background-repeat: no-repeat;
+      height: 59rem;
+      background-position-y: -37rem; } }
+
+.container-cultura {
+  background-image: url("cultura-background.jpg");
+  background-size: 100% auto;
+  height: 80rem;
+  background-position-y: -36rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .container-cultura {
+      background-repeat: no-repeat;
+      height: 59rem;
+      background-position-y: -37rem; } }
+
+.container-eventos {
+  background-image: url("eventos_background.jpg");
+  background-size: 100% auto;
+  height: 103rem;
+  background-position-y: -45rem; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .container-eventos {
+      background-repeat: no-repeat;
+      height: 107rem;
+      background-position-y: -37rem; } }
+
+.image-tag {
+  list-style: none; }
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .image-tag {
+      width: 19rem; } }
+
+/*- - - - estilos para calendario de eventos - - - */
+#loading {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+#calendar {
+  max-width: 900px;
+  margin: 0 auto; }
+
+/*- - - - mapa de Mis Rutas - - - */
+#map {
+  width: 100%;
+  height: 50rem; }
+
+.image_full_width {
+  width: 100%;
+  /*- - -  estilos para divs im├ígenes del store */ }
+
+.googleplay {
+  background-image: url("google-play-store.png");
+  width: 25rem;
+  height: 11rem;
+  background-size: 25rem 10rem;
+  margin: 0 auto 0 auto;
+  background-repeat: no-repeat; }
+
+.applestore {
+  background-image: url("app-store.jpg");
+  width: 26rem;
+  height: 10rem;
+  background-size: 26rem 10rem;
+  margin: 0 auto 0 auto; }
 
 /*# sourceMappingURL=styles.css.map */

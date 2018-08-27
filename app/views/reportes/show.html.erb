@@ -1,26 +1,28 @@
 <div class="contenedor">
   <div class="center">
-    <br />
-    <br />
-    <h1>Resumen reporte:</h1>
+    <p></p>
+    <h1 class="main-color"><i class="fa fa-recycle"></i> Reportar</h1>
+    <hr>
+    <p></p>
+    <h2>Resumen reporte:</h2>
     <br />
     <br />
 
 
     <table>
       <tr>
-        <h3 class="table-gray-light"><strong>Asunto: </strong><%= @reporte.asunto %></h3>
+        <h4 class="table-gray-light"><strong>Asunto: </strong><%= @reporte.asunto %></h4>
       </tr>
       <tr>
-        <h4 class="table-gray"><strong>Fecha: </strong><%= @reporte.fecha %></h4>
-      </tr>
-
-      <tr>
-        <h4 class="table-gray-light"><strong>Ubicación: </strong><%= @reporte.ubicacion %></h4>
+        <h5 class="table-gray"><strong>Fecha: </strong><%= @reporte.fecha %></h5>
       </tr>
 
       <tr>
-        <h4 class="table-gray"><strong>Obervaciones: </strong><%= @reporte.observaciones %></h4>
+        <h5 class="table-gray-light"><strong>Ubicación: </strong><%= @reporte.ubicacion %></h5>
+      </tr>
+
+      <tr>
+        <h5 class="table-gray"><strong>Obervaciones: </strong><%= @reporte.observaciones %></h5>
       </tr>
     </table>
     <br />
@@ -30,6 +32,14 @@
     <br /><br />
 
     <p><%= link_to 'Editar', edit_reporte_path(@reporte), :class => 'main-color a' %></p>
-    <p><%= link_to 'Regresar', :back, :class => 'main-color a' %></p>
+    <br />
+    <br />
+    <div class="center">
+      <div class="button-green">
+        <h4 class="white">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Regresar', :back %>
+      </h4>
+      </div>
+    </div>
   </div>
 </div>

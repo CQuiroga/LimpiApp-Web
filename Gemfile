@@ -23,7 +23,8 @@ gem 'devise'
 gem 'carrierwave', '~> 1.0'
 #gema para trabajar con jquery
 gem 'jquery-rails'
-
+# Gema bindex
+gem 'bindex', '~> 0.5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

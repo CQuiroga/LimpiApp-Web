@@ -79,5 +79,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg', '1.4'
   gem "rails_12factor"
-  gem 'websocket-driver', '~> 0.7.5'
 end

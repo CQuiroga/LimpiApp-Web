@@ -7,8 +7,8 @@ ruby '2.7.8'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-#gem 'pg', '1.4'
-gem 'pg_search'
+gem 'pg', '1.4'
+#gem 'pg_search'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -54,7 +54,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'sqlite3', '1.3.5'
+  gem 'pg', '1.4'
   gem 'web-console', '>= 3.6.2'
   gem 'rspec-rails', '2.10.0'
 end
@@ -79,4 +79,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg', '1.4'
   gem "rails_12factor"
+  gem 'websocket-driver', '~> 0.7.5'
 end

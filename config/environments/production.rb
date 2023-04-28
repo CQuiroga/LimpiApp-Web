@@ -2,7 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # --------- despliegue a producción -------------
-  config.hosts << "eshop-production-f941.up.railway.app"
+  config.hosts << "limpiapp-web-production.up.railway.app"
 
   # Code is not reloaded between requests.
   config.cache_classes = true
